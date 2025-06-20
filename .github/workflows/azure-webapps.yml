@@ -19,11 +19,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        working-directory: ./domiclone
 
       - name: Build project
         run: npm run build
-        working-directory: ./domiclone
 
       - name: Azure Login
         uses: azure/login@v2
@@ -38,4 +36,4 @@ jobs:
         with:
           app-name: domiclone
           resource-group-name: DOMINO-CLONE
-          package: ./domiclone/dist
+          package: ./dist
